@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Manejar las configuraciones de nuestro documento -->
+    <title>My App Productos</title>
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/header-footer.css" />
+    <link rel="stylesheet" href="../../css/products-list.css" />
+  </head>
+
+  <body>
+    <!-- Manejamos todo el contenido visible de nuestro documento -->
+    <%- include('../partials/header.ejs') %>   
+
+    <main>
+      <section class="products">
+        <h1>Nuestros productos</h1>
+        <ul>
+          <% products.forEach(function (product) { %>
+          <li>
+            <a href="/products/<%= product.id %>">
+              <img src="assets/car.jpg" alt="product image" />
+              <h3><%= product.name %></h3>
+              <p><%= product.description %>
+              </p>
+            </a>
+          </li>
+          <% }); %>
+         
+        </ul>
+      </section>
+    </main>
+
+<%- include ("../partials/footer.ejs") %>
+  </body>
+</html>

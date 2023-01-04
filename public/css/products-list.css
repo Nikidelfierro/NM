@@ -1,0 +1,37 @@
+.products > h1 {
+    margin: 0 0 1em;
+  }
+  
+  .products > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  
+  .products > ul > li {
+    overflow: hidden;
+    list-style: none;
+    width: 20em;
+    border-radius: 18px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  
+    transition: all 0.5s;
+  }
+  
+  .products > ul > li:hover {
+    box-shadow: 1px 1px 10px rgb(33, 33, 56);
+  }
+  
+  .products > ul > li > a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .products > ul > li > a > h3 {
+    margin: 0.5em 1em;
+  }
+  
+  .products > ul > li > a > p {
+    margin: 0.5em 1em;
+  }

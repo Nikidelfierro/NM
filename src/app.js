@@ -6,9 +6,15 @@ const express = require ("express");
 
 const app = express();
 
-app.get ("/home", (req, res)=>{
-    res.sendFile(path.join(__dirname, "views/home.html"))
-})
+app.use (express.static(path.join(__dirname, "../public")));
+
+app.set("view engine","ejs");
+
+const homeRoutes = require ("./routes/home");
+const productRoutes = require ("./routes/products");
+
+app.use("/", homeRoutes);
+app.use("/products", productRoutes);
 
 
 app.listen(process.env.PORT, () => {
