@@ -35,12 +35,12 @@ router.get("/", (req, res) => {
   return res.status(200).render("vistas/list.ejs",{ products,});
 });
 
-router.get("/id", (req, res) => {
-  const { id  } = req.params;
+router.get("/:id", (req, res) => {
+  const {id} = req.params;
 
   const product = products.find((product) => product.id == id);
 
-  return res.status(200).render("vistas/details.ejs",{ product });
+  return res.status(200).render("vistas/details.ejs",{ product, });
 });
 
 module.exports = router;
