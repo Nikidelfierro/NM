@@ -5,11 +5,12 @@ const router = express.Router();
 
 // Nuestra primer ruta
 router.get("/", (req, res) => {
-    const {name} = req.query;
+    const {name, lastName} = req.query;
   // files
   res.status(200).render("vistas/home.ejs",{
     user: {
         name,
+        lastName
     }
   });
 });

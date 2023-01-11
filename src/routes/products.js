@@ -35,7 +35,7 @@ router.get("/", (req, res) => {
   return res.status(200).render("vistas/list.ejs",{ products,});
 });
 
-router.get("/:id", (req, res) => {
+router.get("/", (req, res) => {
   const {id} = req.params;
 
   const product = products.find((product) => product.id == id);
