@@ -1,0 +1,166 @@
+* {scroll-behavior: smooth; 
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Color1-Det:#e98fec; 
+    --Color2-HyF:#e98fec; 
+    --Color3-Fondo:#F2E0D5; 
+    --Color4: white;
+    --Color5: #D9D9D9; 
+  }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    width: calc(100vw - (100vw - 100%));
+    background-color: var(--Color3-Fondo);
+}
+
+    /*--- Main ---*/
+    .section {
+        padding: 16px 32px;
+    }
+    .section h1, .section h2 {
+        color: var(--Color2-HyF);
+        font-size: 32px;
+        text-align: center;
+    }
+    .section h1 {
+        background-color: aliceblue;
+        padding: 4px 24px;
+        border-radius: 12px;
+        font-size: 30px;
+
+    }
+    #inicio {
+        background-color: var(--Color1-Det);
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items:center;
+        text-align: center;
+        height: 16vh;
+        background-image: url("/assets/cirugías-estéticas-más-demandadas.jpg");
+        background-attachment: fixed, scroll;
+        background-repeat: none;
+        gap: 20px;
+    }
+    #inicio p {
+        background-color: rgba(0,0,0,.5);
+        color: aliceblue;
+        border-radius: 8px;
+        padding: 16px 32px;
+
+    }
+
+
+    /*--- Servicios ---*/
+    #servicios div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #servicios div ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 16px;
+    }
+    #servicios div ul li {
+        display: flex;
+        flex-direction: column;
+        list-style: none; 
+        margin: 16px 16px;
+        background-color: var(--Color5);
+        border-radius: 16px;
+        padding: 32px 16px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        width: 50%;
+        max-width: 400px;
+    }
+    #servicios div ul li div div a{
+        text-decoration: none;          /* Elimina el subrayado del texto */
+    }
+
+    #servicios div ul li img {
+        margin: 16px 16px;
+        border-radius: 8px;    
+    }
+    #servicios div ul li h3 {
+        color: var(--Color2-HyF);
+    }
+    #servicios div ul li div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #servicios div ul li div div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+        margin: 4px 12px;
+        background-color: var(--Color2-HyF);
+        border-radius: 16px;
+        padding: 12px 12px;
+        height: 16px;
+    }
+    #servicios div ul li div div img, #servicios div ul li div div a {
+        color: white;
+    }
+
+    /*--- About ---*/
+    #about div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 16px;
+    }
+    #about div article {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: stretch;
+        border-radius: 8px;
+        padding: 8px 12px;
+        width: 30%;
+        max-width: 480px;
+    }
+    #about div article img {
+        margin-bottom: 12px;
+        text-align: center;
+        border-radius: 16px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #about div article p {
+        text-align: center;
+    }
+
+    /*--- contact ---*/
+    #contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+    #contact form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        padding: 20px;
+        background-color: #eccfbc;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #contact form input { 
+        margin: 8px;
+    }

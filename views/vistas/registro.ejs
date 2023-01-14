@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registro</title>
+    <link href="/css/register.css" rel="stylesheet" type="text/css">
+    <link href="/css/home.css" rel="stylesheet" type="text/css">
+    <link href="/css/header.css" rel="stylesheet" type="text/css">
+    <link href="/css/footer.css" rel="stylesheet" type="text/css">
+    <script src="/js/testPass.js"></script>
+  </head>
+
+  <body>
+    <%- include('../partials/header.ejs') %> 
+    <main>
+      <section class="section" id="inicio">
+        <h1>DiPro Rex: Soluciones de diseño</h1>
+        <p> Hacemos posible tu idea </p>
+      </section>
+
+      <h1 class="welcome">Estamos felices que te quieras registrar!</h1>
+ 
+    <div class="formularios">  
+      <fieldset class="Test">
+        <form>
+            <label for="UserRealName">Nombre Completo: </label>
+            <input
+                type="text"
+                placeholder="Nombre Completo"
+                name="UserRealName"
+                id="UserRealName">
+        </form>
+        <br>
+        <form>
+            <label for="UserName">Nombre de usuario: </label>
+            <input
+                type="text"
+                placeholder="Nombre de usuario"
+                name="UserName"
+                id="UserName">
+        </form>
+        <br>
+        <form>
+            <label for="Pass1">Contraseña: </label>
+            <input
+                type="password"
+                placeholder="Contraseña"
+                name="Pass1"
+                id="Pass1">
+        </form>
+        <br>    
+        <form>
+            <label for="Pass2">Repetir contrasña: </label>
+            <input
+                type="password"
+                placeholder="Repetir contrasña"
+                name="Pass2"
+                id="Pass2">
+        </form>
+        <br>   
+        <input type="button" value="Comprobar si son iguales" onClick="ComprobarClave()"> 
+    </fieldset>
+    <fieldset class="Test">
+        <form>
+            <label for="email">Correo electrónico: </label>
+            <input
+                type="email"
+                placeholder="Correo electrónico"
+                name="email"
+                id="email">
+        </form>
+        <br>
+    
+        <form>
+            <label for="Pais">Pais de nacimiento: </label>
+            <select name="Pais" id="Pais">
+                <option selected value="Argentina">Argentina</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+            </select>
+        </form>
+        <br>
+    
+        <p for="Genero">Genero percibido: </p>
+        <section>
+        <form>
+            <div class="box">
+                <div class="inner-box-1">
+                    <div class="inner-box-3">
+                        <input type="radio" id="NoBinario" name="Genero" value="No Binario">
+                    </div> 
+                    <div class="inner-box-2">
+                        <label for="NoBinario">No Binario</label>
+                    </div>
+                </div>
+                
+                <div class="inner-box-1">
+                    <div class="inner-box-3">
+                        <input type="radio" id="Femenino" name="Genero" value="Femenino">
+                    </div>
+                    <div class="inner-box-2">
+                        <label for="Femenino">Femenino</label><br> 
+                    </div>            
+                </div>
+    
+                <div class="inner-box-1">
+                    <div class="inner-box-3">
+                        <input type="radio" id="Masculino" name="Genero" value="Masculino">
+                    </div> 
+                    <div class="inner-box-2">
+                        <label for="Masculino">Masculino</label>
+                    </div>
+                </div>
+            </div>
+        </form>        
+        </section>
+        <br>    
+        <br>    
+        <form>
+            <label for="date">Fecha de nacimiento: </label>
+            <input
+                type="date"
+                name="date"
+                id="date"/>
+        </form>
+    </fieldset>
+    <fieldset class="Test">
+        <label for="Telefono">Numero de teléfono: </label>
+        <input 
+            type="tel"
+            name="Telefono"
+            placeholder="(Codigo de area) Numero">
+    </fieldset> 
+    
+    <fieldset class="Test"> 
+    <form>
+            <label for="aceptT&C">Acepta Terminos y condiciones: </label>
+            <input
+                type="checkbox"
+                name="aceptT&C"
+                id="aceptT&C">
+    </form>
+    </fieldset> 
+    
+    <form class="sendReq">
+        <input type="submit">
+    </form>
+</div>
+    </body>
+
+
+    </main>
+
+    <%- include('../partials/footer.ejs') %> 
+    
+  </body>
+</html>

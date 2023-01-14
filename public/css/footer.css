@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Color1-Det:#f78afd; /* Detalles */
+    --Color2-HyF:#eeb9f0; /* Header - Foother */
+    --Color3-Fondo:#f1eeec; /* Fondo */
+    --Color4: white;
+    --Color5: #D9D9D9; /* Detalles 2*/
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    width: calc(100vw - (100vw - 100%));
+    background-color: var(--Color3-Fondo);
+}
+
+/*--- footer MOBILE VIEW---*/
+    footer {
+        background-color: var(--Color2-HyF);      /* Color de fondo */
+        padding: 16px 32px;               /* 16px en sentido vertical, 32px en sentido horizontal */  
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    footer nav {
+        width: 33%;
+    }
+    footer nav ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;                /* Elimina puntitos de la lista */   
+    }
+    footer nav ul li {                  /*  LISTA */
+        padding: 4px 8px;               /* Padding que agrega gaps enrte los elementos del Nav */
+        transition: all .5s;            /* Delay de 0.5s para los efectos */
+        cursor: pointer;                /* Para que el boton aplique a la lista y no solo al texto...  */
+        border-radius: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        text-align: center;
+    }
+    footer nav ul li a {                 
+        flex-direction: row;
+        padding: 4px 8px;
+        justify-content: center;
+        align-items: center;
+    }
+    footer nav ul li a {                /* TEXTO DENTRO DE LA LISTA */
+        text-decoration: none;          /* Elimina el subrayado del texto */
+        color: white;
+    }
+    footer nav ul li:hover {            /* Efectos cuando posiciono el puntero encima del texto */
+        background-color: #0c3131;    /* Cambia el color de fondo */  
+    }
+    footer div {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        color: var(--Color3-Fondo);
+        width: 33%;
+    }
+    footer div img {
+        height: 32x;
+        width: 32px;
+        margin: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+
+    footer div p {
+        color: var(--Color3-Fondo);
+
+    }
+    .redes {
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+    }
+    .redes img {
+        height: 20px;
+        width: 20px;
+        margin: 4px;
+    }
+
+@media (min-width: 1000px){              /*DESKTOP MEDIA*/
+    footer {
+        background-color: var(--Color2-HyF);      /* Color de fondo */
+        padding: 16px 32px;               /* 16px en sentido vertical, 32px en sentido horizontal */  
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    footer nav {
+        width: 33%;
+    }
+    footer nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;                /* Elimina puntitos de la lista */   
+    }
+    footer nav ul li {                  /*  LISTA */
+        padding: 4px 8px;               /* Padding que agrega gaps enrte los elementos del Nav */
+        transition: all .5s;            /* Delay de 0.5s para los efectos */
+        cursor: pointer;                /* Para que el boton aplique a la lista y no solo al texto...  */
+        border-radius: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        text-align: center;
+    }
+    footer nav ul li a {                 
+        flex-direction: row;
+        padding: 4px 8px;
+        justify-content: center;
+        align-items: center;
+    }
+    footer nav ul li a {                /* TEXTO DENTRO DE LA LISTA */
+        text-decoration: none;          /* Elimina el subrayado del texto */
+        color: white;
+    }
+    footer nav ul li:hover {            /* Efectos cuando posiciono el puntero encima del texto */
+        background-color: #0c3131;    /* Cambia el color de fondo */  
+    }
+    footer div {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        color: var(--Color3-Fondo);
+        width: 33%;
+    }
+    footer div img {
+        height: 32x;
+        width: 32px;
+        margin: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+
+    footer div p {
+        color: var(--Color3-Fondo);
+
+    }
+    .redes {
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+    }
+    .redes img {
+        height: 20px;
+        width: 20px;
+        margin: 4px;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Te contamos mas...</title>
+        <link href="/css/header.css" rel="stylesheet" type="text/css">
+        <link href="/css/footer.css" rel="stylesheet" type="text/css">
+        <link href="/css/detailService.css" rel="stylesheet" type="text/css">
+    </head>
+    
+  <body>
+  
+    <%- include('../partials/header.ejs') %> 
+  
+    <main>
+      <section class="section">
+        <div class="ProdctImg">
+          <img src="https://picsum.photos/400/300" />
+        </div>
+        <div>
+          <div class="nombrePrecio">
+            <h3> <%= serviceList.name %> </h3>
+            <h3>$  <%= serviceList.price %> </h3>
+          </div>
+          <article class="descripcion">
+            <p> <%= serviceList.desc %>  </p>
+            <a href="">
+              <img src="/assets/Compra-Logo.png" />
+            </a>  
+          </article>
+        </div>
+
+      </section>
+    </main>
+  
+    <%- include('../partials/footer.ejs') %> 
+  
+  </body>
+</html>

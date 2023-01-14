@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carrito de compras</title>
+    <link href="/css/header.css" rel="stylesheet" type="text/css">
+    <link href="/css/footer.css" rel="stylesheet" type="text/css">
+    <link href="/css/cart.css" rel="stylesheet" type="text/css">
+    <script src="/js/contador.js"></script>
+  </head>
+
+
+  <body>
+
+    <%- include('../partials/header.ejs') %> 
+  
+    <main>
+      <section class="section">
+        <div class="intro">
+            <p>Servicios elegidos</p>
+        </div>
+        <div class="productoSeleccionado">
+            <img src="https://picsum.photos/400/300" />
+            <div class="nameAndDesc">
+                <h3>Servicio 1</h3>
+                <p>descripcion: Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="contador">
+                <button onclick="decrement()" class="buttonCont">-</button>    
+                <h2 id="counting1"> 1 </h2>
+                <button onclick="increment()" class="buttonCont">+</button>  
+            </div>
+            <div class="precio" id="precioFinal">
+                <p>200$</p>
+            </div>
+        </div>
+        <div class="productoSeleccionado">
+            <img src="https://picsum.photos/400/300" />
+            <div class="nameAndDesc">
+                <h3>Servicio 2</h3>
+                <p>descripcion: Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="contador">
+                <button onclick="decrement()" class="buttonCont">-</button>    
+                <h2 id="counting2"> 1 </h2>
+                <button onclick="increment()" class="buttonCont">+</button>  
+            </div>
+            <div class="precio">
+                <p>200$</p>
+            </div>
+        </div>
+        <div class="productoSeleccionado">
+            <img src="https://picsum.photos/400/300" />
+            <div class="nameAndDesc">
+                <h3>Servicio 3</h3>
+                <p>descripcion: Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="contador">
+                <button onclick="decrement()" class="buttonCont">-</button>    
+                <h2 id="counting3"> 1 </h2>
+                <button onclick="increment()" class="buttonCont">+</button>  
+            </div>
+            <div class="precio">
+                <p>200$</p>
+            </div>
+        </div>
+        <div class="subtotal">
+          <button type="submit">Ir a pagar</button>
+          <p>Total a pagar: $ 600</p>
+        </div>  
+      </section>
+    </main>
+  
+    <%- include('../partials/footer.ejs') %> 
+  
+  </body>
+</html>
