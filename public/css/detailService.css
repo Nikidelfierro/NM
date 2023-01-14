@@ -3,11 +3,11 @@
     padding: 0;
 }
 :root {
-    --Color1-Det:#2F6673; /* Detalles */
-    --Color2-HyF:#0F4040; /* Header - Foother */
-    --Color3-Fondo:#F2E0D5; /* Fondo */
+    --Color1-Det:#e98fec; 
+    --Color2-HyF:#e98fec; 
+    --Color3-Fondo:#F2E0D5; 
     --Color4: white;
-    --Color5: #D9D9D9; /* Detalles 2*/
+    --Color5: #D9D9D9; 
   }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 body {
