@@ -21,46 +21,46 @@
  
     <div class="formularios">  
       <fieldset class="Test">
-        <form>
-            <label for="UserRealName">Nombre Completo: </label>
+        <form action="/signup" method="post">
+            <label for="userName">Nombre Completo: </label>
             <input
                 type="text"
                 placeholder="Nombre Completo"
-                name="UserRealName"
-                id="UserRealName">
+                name="userName"
+                id="userName">
         </form>
         <br>
-        <form>
-            <label for="UserName">Nombre de usuario: </label>
+        <form action="/signup" method="post">
+            <label for="user">Nombre de usuario: </label>
             <input
                 type="text"
                 placeholder="Nombre de usuario"
-                name="UserName"
-                id="UserName">
+                name="userName"
+                id="userName">
         </form>
         <br>
-        <form>
-            <label for="Pass1">Contraseña: </label>
+        <form action="/signup" method="post">
+            <label for="pass">Contraseña: </label>
             <input
                 type="password"
                 placeholder="Contraseña"
-                name="Pass1"
-                id="Pass1">
+                name="pass"
+                id="pass">
         </form>
         <br>    
-        <form>
-            <label for="Pass2">Repetir contrasña: </label>
+        <form action="/signup" method="post">
+            <label for="pass1">Repetir contrasña: </label>
             <input
                 type="password"
                 placeholder="Repetir contrasña"
-                name="Pass2"
-                id="Pass2">
+                name="pass1"
+                id="pass1">
         </form>
         <br>   
         <input type="button" value="Comprobar si son iguales" onClick="ComprobarClave()"> 
     </fieldset>
     <fieldset class="Test">
-        <form>
+        <form >
             <label for="email">Correo electrónico: </label>
             <input
                 type="email"
