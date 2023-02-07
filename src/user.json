@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "user": "123",
+    "pass": "$2b$10$iRJl50BxXrtQbH6ztTzUuOAIQu6rWajAEgs0QFIOyi.Y7GFq0lX56"
+  },
+  {
+    "user": "12345",
+    "pass": "$2b$10$kyq2NYGVLeLueodovuOIH.5wQ3zEFtG1MxIyJj6Hf6TuXM2DVhjc."
+  },
+  {
+    "user": "eltetas",
+    "pass": "$2b$10$mKCjokJpoz62FMz8iC9nhu7WPPxBEgG1v4M4QGooqVqWm32yM1yTC"
+  },
+  {
+    "user": "1234",
+    "pass": "$2b$10$DStxvCYTmet12m9caZ9b2uvB3gNnMJMNm/jow5HexXvWmykA06LVi"
+  }
+]

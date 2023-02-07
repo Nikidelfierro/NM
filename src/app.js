@@ -8,10 +8,9 @@ const app = express();
 const fs = require ("fs");
 app.use (express.static(path.join(__dirname, "../public")));
 app.use (bodyParser.urlencoded({ extended: true}));
-const bcrypt = ("bcrypt");
+const bcrypt = require("bcrypt");
 
-
-app.set("view engine","ejs");
+app.set("view engine","ejs","html");
 
 
 
@@ -32,24 +31,57 @@ app.get("/signup", (req, res)=> {
 app.post("/signup", (req, res)=>{
     const {user, pass} = req.body;
 
-    const file =     fs.writeFileSync(path.join(__dirname, "./user.json"));
-    const parsedFile = JSON.parse(file);
-
-    parsedFile = [...parsedFile, {
-        user,
-        pass: bcrypt.hash(pass, 10),
-
-    },]
-
-    fs.writeFileSync(path.join(__dirname, "./user.json"));
+    const file =     fs.readFileSync(path.join(__dirname, "./user.json"));
+    let parsedFile = JSON.parse(file);
 
 
-    res.status(200);
+bcrypt.genSalt(10, (err,salt) => {
+        bcrypt.hash(pass, salt, (err,hash) => {
+            fs.writeFileSync(
+                path.join(__dirname, "./user.json"),
+                 JSON.stringify([
+                    ...parsedFile,
+                {
+                user,
+                pass: hash,
+        },
+        ], null, 2));
+
+
+
+        });
+    });
+
+
+
+    
+
+    res.redirect("/signin");
 });
 
+app.get("/signin", (req, res)=>{ 
+res.render("vistas/login.ejs")});
 
-app.get("/signin", (req, res)=>{
+app.post("/signin", (req, res)=>{
     const {user, pass} = req.body;
+
+    const file =     fs.readFileSync(path.join(__dirname, "./user.json"));
+    let parsedFile = JSON.parse(file);
+
+    const existedUser = parsedFile.find ((users)=>users.user === user);
+
+    if(!existedUser) {
+        return res.render("vistas/invalid.ejs");
+    }
+
+    const validPassword = bcrypt.compareSync(pass, existedUser.pass);
+
+    if (!validPassword){
+        return res.render("vistas/invalid.ejs");
+    }
+
+    res.redirect("/");
+
     res.status(200);
 });
 

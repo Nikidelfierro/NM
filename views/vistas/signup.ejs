@@ -17,133 +17,28 @@
         <p>Buscamos Cambios</p>
       </section>
 
-      <h1 class="welcome">Estamos felices que te quieras registrar!</h1>
+      <h1 class="welcome">Registro</h1>
  
-    <div class="formularios">  
-      <fieldset class="Test">
-        <form action="/signup" method="post">
-            <label for="userName">Nombre Completo: </label>
-            <input
-                type="text"
-                placeholder="Nombre Completo"
-                name="userName"
-                id="userName">
         </form>
         <br>
-        <form action="/signup" method="post">
+        <form action="/signup" method="post"><div>
             <label for="user">Nombre de usuario: </label>
+        </div>
             <input
                 type="text"
                 placeholder="Nombre de usuario"
-                name="userName"
-                id="userName">
-        </form>
-        <br>
-        <form action="/signup" method="post">
-            <label for="pass">Contraseña: </label>
+                name="user"
+                id="user">
+       
+        <br><div>
+        <label for="pass">Contraseña: </label>
+    </div>
             <input
                 type="password"
                 placeholder="Contraseña"
                 name="pass"
                 id="pass">
-        </form>
-        <br>    
-        <form action="/signup" method="post">
-            <label for="pass1">Repetir contrasña: </label>
-            <input
-                type="password"
-                placeholder="Repetir contrasña"
-                name="pass1"
-                id="pass1">
-        </form>
-        <br>   
-        <input type="button" value="Comprobar si son iguales" onClick="ComprobarClave()"> 
-    </fieldset>
-    <fieldset class="Test">
-        <form >
-            <label for="email">Correo electrónico: </label>
-            <input
-                type="email"
-                placeholder="Correo electrónico"
-                name="email"
-                id="email">
-        </form>
-        <br>
-    
-        <form>
-            <label for="Pais">Pais de nacimiento: </label>
-            <select name="Pais" id="Pais">
-                <option selected value="Argentina">Argentina</option>
-                <option value="Brasil">Brasil</option>
-                <option value="Bolivia">Bolivia</option>
-                <option value="Chile">Chile</option>
-                <option value="Colombia">Colombia</option>
-            </select>
-        </form>
-        <br>
-    
-        <p for="Genero">Genero percibido: </p>
-        <section>
-        <form>
-            <div class="box">
-                <div class="inner-box-1">
-                    <div class="inner-box-3">
-                        <input type="radio" id="NoBinario" name="Genero" value="No Binario">
-                    </div> 
-                    <div class="inner-box-2">
-                        <label for="NoBinario">No Binario</label>
-                    </div>
-                </div>
-                
-                <div class="inner-box-1">
-                    <div class="inner-box-3">
-                        <input type="radio" id="Femenino" name="Genero" value="Femenino">
-                    </div>
-                    <div class="inner-box-2">
-                        <label for="Femenino">Femenino</label><br> 
-                    </div>            
-                </div>
-    
-                <div class="inner-box-1">
-                    <div class="inner-box-3">
-                        <input type="radio" id="Masculino" name="Genero" value="Masculino">
-                    </div> 
-                    <div class="inner-box-2">
-                        <label for="Masculino">Masculino</label>
-                    </div>
-                </div>
-            </div>
-        </form>        
-        </section>
-        <br>    
-        <br>    
-        <form>
-            <label for="date">Fecha de nacimiento: </label>
-            <input
-                type="date"
-                name="date"
-                id="date"/>
-        </form>
-    </fieldset>
-    <fieldset class="Test">
-        <label for="Telefono">Numero de teléfono: </label>
-        <input 
-            type="tel"
-            name="Telefono"
-            placeholder="(Codigo de area) Numero">
-    </fieldset> 
-    
-    <fieldset class="Test"> 
-    <form>
-            <label for="aceptT&C">Acepta Terminos y condiciones: </label>
-            <input
-                type="checkbox"
-                name="aceptT&C"
-                id="aceptT&C">
-    </form>
-    </fieldset> 
-    
-    <form class="sendReq">
+        
         <input type="submit">
     </form>
 </div>

@@ -18,42 +18,22 @@
 
       <h1 class="welcome">Bienvenida/o!</h1>
         <fieldset>
-          <form>
+          <form action="/signin" method="post">
             <label for="user" >Nombre de usuario: </label>
             <input
               type="text"
               placeholder="Nombre de usuario"
               name="user"
               id="user">
-          </form>
-          <form>
+
             <label for="pass">Contraseña: </label>
             <input
                 type="password"
                 placeholder="Contraseña"
                 name="pass"
                 id="pass">
-          </form>
-        </fieldset>
 
-        <fieldset> 
-          <form class="check">
-            <label for="Remember">Recordar usuario</label>
-            <input
-              type="checkbox"
-              name="Remember"
-              id="Remember">
-          </form>
-          <form class="check">
-            <label for="LogOk">Mantenerse Logueado </label>
-            <input
-              type="checkbox"
-              name="LogOk"
-              id="LogOk">
-          </form>
-        </fieldset> 
-    
-        <form class="sendReq">
+          
           <input type="submit" value="Ingresar">
         </form>
     </main>
