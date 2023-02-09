@@ -38,8 +38,8 @@ app.use("/users", userRoutes);
 
 app.use(cookieParser());
 
-const authControllers = require("./routes/auth");
-app.use ("/",authControllers);
+const authRoutes = require("./routes/auth");
+app.use ("/",authRoutes);
 
 
 //${process.env.PORT}

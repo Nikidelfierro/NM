@@ -71,4 +71,4 @@ module.exports = {
     sendSignupForm,
     getSigninData,
     getSignupData
-}
+}; 
