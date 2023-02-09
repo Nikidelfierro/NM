@@ -2,16 +2,17 @@ const path = require("path");
 require("dotenv").config();
 const express = require ("express");   
 const bodyParser = require ("body-parser");
-const session = require ("express-session");
 const cookieParser = require ("cookie-parser");
+const session = require ("express-session");
 const app = express();
-const fs = require ("fs");
+
+
+
 app.use (express.static(path.join(__dirname, "../public")));
 app.use (bodyParser.urlencoded({ extended: true}));
-const bcrypt = require("bcrypt");
+
 
 app.set("view engine","ejs","html");
-
 
 
 app.use(
@@ -24,80 +25,21 @@ app.use(
 ));
 
 
-app.get("/signup", (req, res)=> {
-        res.render("vistas/signup.ejs");
-});
-
-app.post("/signup", (req, res)=>{
-    const {user, pass} = req.body;
-
-    const file =     fs.readFileSync(path.join(__dirname, "./user.json"));
-    let parsedFile = JSON.parse(file);
-
-
-bcrypt.genSalt(10, (err,salt) => {
-        bcrypt.hash(pass, salt, (err,hash) => {
-            fs.writeFileSync(
-                path.join(__dirname, "./user.json"),
-                 JSON.stringify([
-                    ...parsedFile,
-                {
-                user,
-                pass: hash,
-        },
-        ], null, 2));
-
-
-
-        });
-    });
-
-
-
-    
-
-    res.redirect("/signin");
-});
-
-app.get("/signin", (req, res)=>{ 
-res.render("vistas/login.ejs")});
-
-app.post("/signin", (req, res)=>{
-    const {user, pass} = req.body;
-
-    const file =     fs.readFileSync(path.join(__dirname, "./user.json"));
-    let parsedFile = JSON.parse(file);
-
-    const existedUser = parsedFile.find ((users)=>users.user === user);
-
-    if(!existedUser) {
-        return res.render("vistas/invalid.ejs");
-    }
-
-    const validPassword = bcrypt.compareSync(pass, existedUser.pass);
-
-    if (!validPassword){
-        return res.render("vistas/invalid.ejs");
-    }
-
-    res.redirect("/");
-
-    res.status(200);
-});
-
-
 
 const homeRoutes = require ("./routes/home");
 const productRoutes = require ("./routes/products");
-const userRoutes = require ("./routes/users");
+const userRoutes = require ("./routes/auth");
 
 
-app.use("/",userRoutes);
 app.use("/", homeRoutes);
 app.use("/products", productRoutes);
 app.use("/users", userRoutes);
 
 
+app.use(cookieParser());
+
+const authControllers = require("./routes/auth");
+app.use ("/",authControllers);
 
 
 //${process.env.PORT}
