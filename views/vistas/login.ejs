@@ -6,19 +6,22 @@
     <link href="/css/home.css" rel="stylesheet" type="text/css">
     <link href="/css/header.css" rel="stylesheet" type="text/css">
     <link href="/css/footer.css" rel="stylesheet" type="text/css">
+
   </head>
 
   <body>
     <%- include('../partials/header.ejs') %> 
     <main>
+      
       <section class="section" id="inicio">
         <h1>SelfLove</h1>
         <p>Buscamos Cambios</p>
       </section>
 
-      <h1 class="welcome">Bienvenida/o!</h1>
+      <h1 class="welcome">Bienvenida/o!</h1> 
+      <div class="form">
         <fieldset>
-          <form action="/signin" method="post">
+          <form action="/signin" method="post" class="sendReq">   
             <label for="user" >Nombre de usuario: </label>
             <input
               type="text"
@@ -34,8 +37,10 @@
                 id="pass">
 
           
-          <input type="submit" value="Ingresar">
+          <input type="submit" value="Ingresar" class="sumbit">
         </form>
+        <div class="register"><p>¿No estas registrado?</p><a href="/signup">Registrate</a></div>
+      </div>
     </main>
 
     <%- include('../partials/footer.ejs') %> 

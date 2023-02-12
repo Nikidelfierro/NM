@@ -18,34 +18,42 @@
       </section>
 
       <h1 class="welcome">Registro</h1>
- 
-        </form>
-        <br>
-        <form action="/signup" method="post"><div>
-            <label for="user">Nombre de usuario: </label>
-        </div>
-            <input
-                type="text"
-                placeholder="Nombre de usuario"
-                name="user"
-                id="user">
-       
-        <br><div>
-        <label for="pass">Contraseña: </label>
-    </div>
-            <input
-                type="password"
-                placeholder="Contraseña"
-                name="pass"
-                id="pass">
+ <div class="regBox">
+      <fieldset>
+        <form action="/signup" method="post" class="sendReq">
+          <label for="user" >Nombre de usuario: </label>
+          <input
+            type="text"
+            placeholder="Nombre de usuario"
+            name="user"
+            id="user">
+
+            <label for="name" >Nombre y apellido: </label>
+          <input
+            type="text"
+            placeholder="Nombre"
+            name="name"
+            id="name">
+
+          <label for="pass">Contraseña: </label>
+          <input
+              type="password"
+              placeholder="Contraseña"
+              name="pass"
+              id="pass">
+
+
+              <label for="num">Numero de celular: </label>
+          <input
+              type="number"
+              placeholder="Numero de celular"
+              name="num"
+              id="num">
         
-        <input type="submit">
-    </form>
-</div>
-    </body>
-
-
-    </main>
+        <input type="submit" value="Ingresar" class="sumbit">
+      </form>
+    </div>
+  </main>
 
     <%- include('../partials/footer.ejs') %> 
     

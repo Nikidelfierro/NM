@@ -1,4 +1,3 @@
-
 const path = require ("path");
 const fs = require ("fs");
 const bcrypt = require("bcrypt");
@@ -36,7 +35,7 @@ const sendSignupForm = (req, res)=> {
 };
 
 const getSignupData =  (req, res)=>{
-    const {user, pass} = req.body;
+    const {user, pass,num, name} = req.body;
 
     const file =     fs.readFileSync(path.join(__dirname, "../models/user.json"));
     let parsedFile = JSON.parse(file);
@@ -51,6 +50,8 @@ bcrypt.genSalt(10, (err,salt) => {
                 {
                 user,
                 pass: hash,
+                num,
+                name,
         },
         ], null, 2));
 

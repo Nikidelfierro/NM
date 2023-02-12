@@ -26,9 +26,11 @@ body {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        font-weight: bold;
     }
     footer nav {
         width: 33%;
+
     }
     footer nav ul {
         display: flex;
@@ -50,6 +52,7 @@ body {
         padding: 4px 8px;
         justify-content: center;
         align-items: center;
+        font-weight: bold;
     }
     footer nav ul li a {                /* TEXTO DENTRO DE LA LISTA */
         text-decoration: none;          /* Elimina el subrayado del texto */
